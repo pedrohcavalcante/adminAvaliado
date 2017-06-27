@@ -61,29 +61,15 @@ $sql_exec_consulta = $mysqli->query($sql_select_universidade) or die ($mysqli->e
                     <input  id="nome" name="nome" type="text" class="validate">
                     <label for="nome">Nome do Curso</label>
                     </div>
-                    <div class="input-field col s6">
-                    <input  id="sigla" name="sigla" type="text" class="validate">
-                    <label for="sigla">Sigla</label>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="input-field col s6">
-                    <input id="endereco" type="text" name="endereco" class="validate">
-                    <label for="endereco">Endereço</label>
-                    </div>
-                    <div class="input-field col s6">
-                    <input id="telefone" type="text" name="telefone" class="validate">
-                    <label for="telefone">Telefone</label>
-                    </div>
                 </div>
                 <div class="input-field col s12">
-                    <select required>
+                    <select name = "idUniversidade" id = "idUniversidade" required>
                         <option value="" disabled selected>Escolha a Universidade</option>
 
                         <?php
                         while($exec_universidade = $sql_exec_consulta->fetch_assoc()){
                             echo ("
-                            <option id='$exec_universidade[id] value='$exec_universidade[id]'>$exec_universidade[nome] - $exec_universidade[sigla]</option>
+                            <option value=".$exec_universidade['id'].">".$exec_universidade['nome']." - ".$exec_universidade['sigla']."</option>
                             ");
                         }
                         ?>
