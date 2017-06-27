@@ -58,7 +58,7 @@ $sql_exec_consulta = $mysqli->query($sql_select_universidade) or die ($mysqli->e
                 <form class="col s12" name="formCadastroCont" action="insertCurso.php" method="POST">
                 <div class="row">
                     <div class="input-field col s6">
-                    <input  id="nome" name="nome" type="text" class="validate">
+                    <input  id="nome" name="nome" type="text" class="validate" required>
                     <label for="nome">Nome do Curso</label>
                     </div>
                 </div>
