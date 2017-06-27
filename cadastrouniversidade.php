@@ -49,21 +49,21 @@ $row = $sql_query->fetch_assoc();
                 <form class="col s12" name="formCadastroCont" action="insertUniversidade.php" method="POST">
                 <div class="row">
                     <div class="input-field col s6">
-                    <input  id="nome" name="nome" type="text" class="validate">
+                    <input  id="nome" name="nome" type="text" class="validate" required>
                     <label for="nome">Nome da Universidade</label>
                     </div>
                     <div class="input-field col s6">
-                    <input  id="sigla" name="sigla" type="text" class="validate">
+                    <input  id="sigla" name="sigla" type="text" class="validate" required>
                     <label for="sigla">Sigla</label>
                     </div>
                 </div>
                 <div class="row">
                     <div class="input-field col s6">
-                    <input id="endereco" type="text" name="endereco" class="validate">
+                    <input id="endereco" type="text" name="endereco" class="validate" required>
                     <label for="endereco">Endereço</label>
                     </div>
                     <div class="input-field col s6">
-                    <input id="telefone" type="text" name="telefone" class="validate">
+                    <input id="telefone" type="text" name="telefone" class="validate" required>
                     <label for="telefone">Telefone</label>
                     </div>
                 </div>
